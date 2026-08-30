@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Random Fact</title>
+</head>
+<body style="font-family: sans-serif; text-align: center; margin-top: 100px;">
+  <h1>🎲 Random Fact Generator</h1>
+  <p id="fact">Click the button to learn something!</p>
+  <button onclick="showFact()">Give me a fact</button>
+
+  <script>
+    const facts = [
+      "Honey never spoils.",
+      "Octopuses have three hearts.",
+      "Bananas are berries, but strawberries aren't.",
+      "A group of flamingos is called a 'flamboyance'.",
+      "The Eiffel Tower can grow taller in summer heat."
+    ];
+    function showFact() {
+      const random = facts[Math.floor(Math.random() * facts.length)];
+      document.getElementById("fact").innerText = random;
+    }
+  </script>
+</body>
+</html>
